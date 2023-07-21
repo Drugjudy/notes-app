@@ -2,8 +2,9 @@ import React, {useState, useEffect} from 'react'
 import {Link} from 'react-router-dom'
 import {format} from 'timeago.js'
 import axios from 'axios'
+import ReactHtmlParser from 'react-html-parser';
 
-export default function Home() {
+export default function Home({ note }) {
     const [notes, setNotes] = useState([])
     const [token, setToken] = useState('')
 
@@ -42,15 +43,16 @@ export default function Home() {
                     <div className="card" key={note._id}>
                         <h4 title={note.title}>{note.title}</h4>
                         <div className="text-wrapper">
-                            <p>{note.content}</p>
+                            {ReactHtmlParser(note.content)}
                         </div>
                         <p className="date">{format(note.date)}</p>
+                        <p>{note.category}</p>
                         <div className="card-footer">
                             {note.name}
-                            <Link to={`edit/${note._id}`} >Edit</Link>
+                            <Link to={`edit/${note._id}`} >EDIT</Link>
                         </div>
                         <button className="close" 
-                        onClick={() => deleteNote(note._id)} >X</button>
+                        onClick={() => deleteNote(note._id)} >DELETE</button>
                     </div>
                 ))
             }

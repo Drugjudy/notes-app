@@ -17,17 +17,30 @@ app.use('/users', userRouter)
 app.use('/api/notes', noteRouter)
 
 
+// ... (other code)
+
 // Connect to MongoDB
-const URI = process.env.MONGODB_URL
-mongoose.connect(URI, {
+const URI = process.env.MONGODB_URL;
+console.log("URI:", URI); // Add this line to check the value of URI
+mongoose.connect(
+  URI,
+  {
     useCreateIndex: true,
     useFindAndModify: false,
     useNewUrlParser: true,
-    useUnifiedTopology: true
-}, err =>{
-    if(err) throw err;
-    console.log('Connected to MongoDB')
-})
+    useUnifiedTopology: true,
+  },
+  (err) => {
+    if (err) {
+      console.error("Error connecting to MongoDB:", err);
+      throw err;
+    }
+    console.log("Connected to MongoDB");
+  }
+);
+
+// ... (other code)
+
 
 
 // Below MongoDB and  Above Listen Sever

@@ -49,6 +49,7 @@ export default function Login({setIsLogin}) {
 
     return (
        <section className="login-page">
+        <h1 class="title-head">NOTES KEEPER</h1>
            <div className="login create-note">
                 <h2>Login</h2>
                 <form onSubmit={loginSubmit}>

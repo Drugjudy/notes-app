@@ -15,12 +15,12 @@ code {
 }
 
 body{
-  background: rgb(63,9,63);
+  background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
 }
 .notes-page{
   width: 100%;
   min-height: 100vh;
-  color: whitesmoke;
+  color: rgb(255, 255, 255);
 }
 .notes-page header{
   max-width: 1920px;
@@ -34,7 +34,7 @@ body{
 }
 a{
   text-decoration: none;
-  color: whitesmoke;
+  color: rgb(1, 0, 0);
 }
 .notes-page header .logo{
   text-transform: uppercase;
@@ -66,11 +66,12 @@ a{
 }
 .card{
   width: 300px;
-  box-shadow: 0 0 5px rgb(7,25,63);
-  background: rgb(7,25,63);
+  box-shadow: 0 0 5px rgb(210, 221, 245);
+  background: rgb(245, 245, 245);
   padding: 10px;
   position: relative;
-  color: #ddd;
+  border-radius: 10px;
+  color: #000000;
   margin: 15px;
   cursor: pointer;
 }
@@ -83,7 +84,7 @@ a{
   background: transparent;
   border: none;
   outline: none;
-  color: white;
+  color: rgb(143, 60, 60);
 }
 .card h4{
   margin-right: 10px;
@@ -99,11 +100,11 @@ a{
   -webkit-line-clamp: 7;
   overflow: hidden;
   margin: 10px 0;
-  color: #fff9;
+  color: rgba(0, 0, 0, 0.6);
 }
 .card .date{
   text-align: right;
-  color: wheat;
+  color: rgb(0, 0, 0);
 }
 .card-footer{
   display: flex;
@@ -120,7 +121,8 @@ a{
   max-width: 500px;
   width: 100%;
   margin: auto;
-  border: 10px solid #ccc;
+  border-radius: 25px;
+  border: 10px solid #ffffff;
   padding: 30px;
 }
 .create-note h2{
@@ -153,7 +155,7 @@ a{
   text-transform: uppercase;
   font-weight: 900;
   letter-spacing: 2px;
-  color: rgb(7,25,63);
+  color: rgb(181, 197, 231);
 }
 @media (max-width: 500px){
   .create-note{
@@ -178,11 +180,11 @@ a{
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: rgb(63,9,63);
+  background: #ffffff;
 }
 .login-page h2,
 .login-page h3{
-  color: #fff8;
+  color: rgba(255, 0, 0, 0.533);
 }
 .login-page h3{
     text-align: center;
@@ -191,9 +193,19 @@ a{
 }
 .login-page p{
   margin: 10px 0;
-  color: white;
+  color: rgb(255, 160, 160);
 }
 .login-page span:hover{
   color: orange;
   cursor: pointer;
+}
+
+.title-head {
+  font-size: xx-large;
+  font-display: space;
+  text-align: center;
+  padding-top: 100px;
+  margin-bottom: -10px;
+  font-weight: 500;
+  color: white;
 }

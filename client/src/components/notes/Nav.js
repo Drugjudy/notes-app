@@ -11,7 +11,7 @@ export default function Nav({setIsLogin}) {
     return (
         <header>
             <div className="logo">
-                <h1><Link to="/">Dev Notes</Link></h1>
+                <h1><Link to="/">Notes Keeper</Link></h1>
             </div>
             <ul>
                 <li><Link to="/">Home</Link></li>
