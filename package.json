@@ -4,8 +4,8 @@
   "description": "Notes app built with the MERN stack.",
   "main": "server.js",
   "scripts": {
-    "start": "set SET NODE_OPTIONS=--openssl-legacy-provider && react-scripts start",
-    "build": "set SET NODE_OPTIONS=--openssl-legacy-provider && react-scripts build",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
     "server": "nodemon server.js",
     "client": "cd client && npm run start",
     "client-install": "cd client && npm install",
